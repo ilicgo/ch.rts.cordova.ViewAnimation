@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="ch.rts.cordova.ViewAnimation" version="1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>ViewAnimation</name>
-  <js-module name="ViewAnimation" src="www/ViewAnimation.js">
-    <clobbers target="cordova.ViewAnimation" />
-  </js-module>
+
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
       <feature name="ViewAnimation">
         <param name="ios-package" value="ViewAnimation" />
       </feature>
     </config-file>
+    <js-module name="ViewAnimation" src="www/ViewAnimation.js">
+      <clobbers target="cordova.ViewAnimation" />
+    </js-module>
     <source-file src="src/ios/ViewAnimation.m" />
   </platform>
 </plugin>
